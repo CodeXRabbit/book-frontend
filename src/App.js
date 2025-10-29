@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import axios from "axios";
 import React from "react";
-import {Avatar, Button, Space, Table} from "antd";
+import {Avatar, Button, Table} from "antd";
 import {Container} from "./Container";
 import Footer from "./Footer";
 import {deleteOne} from "./studentClient";
@@ -71,7 +71,7 @@ function App() {
             title: 'delete',
             key: 'delete',
             render: (_, record) => (
-                <Button type="primary" danger onClick={ () => deleteOne(record.bookId)}>
+                <Button type="primary" danger onClick={() => deleteOne(record.bookId)}>
                     delete
                 </Button>
             )

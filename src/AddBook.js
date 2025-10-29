@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {Button, Col, Form, Input, Modal} from "antd";
+import {Button, Modal} from "antd";
 import axios from "axios";
 
 const AddBook = () => {
@@ -16,7 +16,7 @@ const AddBook = () => {
 
     const handleOk = () => {
         console.log(bookName, author, publishedDate)
-        axios.post('/book/add', {bookName, author, publishedDate}).then(r => {
+        axios.post('/book/add', {bookName, author, publishedDate}).then(() => {
             setIsModalOpen(false)
         })
     }
